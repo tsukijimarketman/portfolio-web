@@ -25,6 +25,37 @@
   font-style: normal;
 }
 
+.background-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 90vh;
+  z-index: 0;
+  pointer-events: none;
+  background-image: linear-gradient(
+      rgba(63, 206, 206, 0.12) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(63, 206, 206, 0.12) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 50px 50px, 50px 50px;
+  }
+}
+
+#home {
+  position: relative;
+  overflow: hidden;
+}
+
 h1 {
   color: #3fcece;
   font-family: "GlancyrNeue-Bold", "Glancyr", sans-serif;
@@ -62,6 +93,7 @@ a:active {
   background-color: #06292d;
   justify-content: space-between;
   padding: 20px 80px;
+  border-bottom: thin solid #f1fcfb5f;
 }
 
 .navbar {
@@ -79,7 +111,7 @@ a:active {
 }
 
 .home-section {
-  background-color: white;
+  background-color: black;
   display: flex;
   height: 90vh;
   width: auto;
@@ -109,7 +141,7 @@ a:active {
   font-family: Inter;
   font-size: 80px;
   text-transform: uppercase;
-  color: #06292d;
+  color: #f1fcfb;
   letter-spacing: 4px;
 }
 
@@ -160,7 +192,7 @@ a:active {
   height: 70px;
   border-radius: 150px;
   background-color: white;
-  border: solid black;
+  border: none;
   font-family: Inter;
   font-size: 18px;
   font-weight: bold;
