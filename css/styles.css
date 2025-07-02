@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+/* review the @font-face getting the fonts */
 @font-face {
   font-family: "GlancyrNeue-Medium";
   src: url("../fonts/GlancyrNeue-Medium.otf") format("opentype");
@@ -25,6 +26,7 @@
   font-style: normal;
 }
 
+/* review the getting of the background-grid as well as the @keyframes */
 .background-grid {
   position: absolute;
   top: 0;
@@ -130,9 +132,8 @@ a:active {
 }
 
 .home2 {
-  background-color: blue;
   display: flex;
-  margin: 180px 0;
+  margin: 200px 0;
   margin-right: 100px;
   flex: 1 0 auto;
 }
@@ -196,4 +197,83 @@ a:active {
   font-family: Inter;
   font-size: 18px;
   font-weight: bold;
+}
+
+.code-block {
+  background-color: #10151a;
+  border: 1px solid #263238;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px 8 rgba(63, 206, 206, 0.15);
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.code-header {
+  background: #18222b;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.code-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.code-dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.code-dots span:nth-child(1) {
+  background: #ff5f57;
+}
+
+.code-dots span:nth-child(2) {
+  background: #ffbd2e;
+}
+
+.code-dots span:nth-child(3) {
+  background: #28ca42;
+}
+
+.code-title {
+  font-family: "Jetbrains Mono", monospace;
+  font-size: 0.95rem;
+  color: #b0bec5;
+}
+
+.code-content {
+  padding: 1.5rem;
+  font-family: "Jetbrains Mono", monospace;
+  font-size: 1rem;
+  color: #e3f2fd;
+  background: #10151a;
+  line-height: 3;
+}
+
+/* .code-line {
+  white-space: pre;
+} */
+
+.keywod {
+  color: #3fcece;
+  font-weight: bold;
+}
+
+.variable {
+  color: #ffd54f;
+}
+
+.function {
+  color: #80cbc4;
+}
+
+.property {
+  color: #b39ddb;
 }
