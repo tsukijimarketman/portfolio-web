@@ -2,6 +2,34 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-padding-top: 70px;
+}
+
+body {
+  padding-top: 78px;
+}
+
+.FAQ {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  background-color: #1cadb0;
+  height: 60px;
+  width: 60px;
+  border-radius: 200px;
+  background-image: url("../assets/chatbot.png");
+  background-size: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 /* review the @font-face getting the fonts */
@@ -37,7 +65,7 @@
   pointer-events: none;
   background-image: linear-gradient(
       rgba(63, 206, 206, 0.12) 1px,
-      transparent 1px
+      transparent 2px
     ),
     linear-gradient(90deg, rgba(63, 206, 206, 0.12) 1px, transparent 1px);
   background-size: 50px 50px;
@@ -69,7 +97,7 @@ li {
 }
 
 a {
-  color: white;
+  color: rgb(174, 174, 174);
   font-family: "GlancyrNeue-Regular", "Glancyr", sans-serif;
 }
 
@@ -91,6 +119,11 @@ a:active {
 }
 
 .appbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   display: flex;
   background-color: #06292d;
   justify-content: space-between;
@@ -166,7 +199,7 @@ a:active {
   font-family: Inter;
   font-size: 30px;
   font-weight: 300;
-  color: grey;
+  color: rgb(174, 174, 174);
   letter-spacing: 3px;
   overflow-wrap: break-word;
   word-break: break-word;
@@ -184,6 +217,7 @@ a:active {
   font-family: Inter;
   font-size: 18px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .btn2 {
@@ -197,6 +231,7 @@ a:active {
   font-family: Inter;
   font-size: 18px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .code-block {
@@ -208,6 +243,7 @@ a:active {
   max-width: 600px;
   width: 100%;
   margin: 0 auto;
+  z-index: 2;
 }
 
 .code-header {
@@ -276,4 +312,268 @@ a:active {
 
 .property {
   color: #b39ddb;
+}
+
+.about-section {
+  background-color: black;
+  height: 90vh;
+  width: 100%;
+  padding: 20px 20px;
+}
+
+.column1 {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.label2 {
+  font-family: Inter, monospace;
+  display: inline-block;
+  background-color: #06292d;
+  color: #3fcece;
+  height: 100%;
+  width: 100px;
+  border: none;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+}
+
+.column2 {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+.section-headers {
+  color: #3fcece;
+  font-family: Inter, monospace;
+  display: inline-block;
+  height: 100%;
+  width: auto;
+  border: none;
+  border-radius: 20px;
+  display: flex;
+  font-size: 70px;
+  font-weight: 900;
+  align-items: center;
+  justify-content: center;
+}
+
+.column3 {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.section-desc {
+  font-family: Inter, monospace;
+  display: inline-block;
+  height: 100%;
+  width: 800px;
+  border: none;
+  color: rgb(174, 174, 174);
+  display: flex;
+  font-size: 30px;
+  font-weight: 200;
+  align-items: center;
+  justify-content: center;
+}
+
+.column4 {
+  width: 100%;
+  height: 320px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.placecontainer {
+  height: 320px;
+  width: 100%;
+  margin: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box1 {
+  height: 320px;
+  width: 400px;
+  background-color: #111111;
+  border: thin solid #16484b;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+}
+
+.box1-spacer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 250px;
+  width: auto;
+  margin: 20px;
+}
+
+.circleavatar {
+  width: 100px;
+  height: 100px;
+  background-color: #3fcece;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.box1 .material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 900, "GRAD" 0, "opsz" 24;
+  font-size: 45px !important;
+  display: inline-block;
+}
+.box2 .material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  font-size: 45px !important;
+  display: inline-block;
+}
+
+.box3 .material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  font-size: 45px !important;
+  display: inline-block;
+}
+
+.header-box-title {
+  font-size: 30px;
+  font-family: "Inter", monospace;
+  font-weight: bold;
+  color: white;
+  margin: 10px;
+}
+
+.header-box-desc {
+  color: rgb(174, 174, 174);
+  font-family: "Inter", monospace;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 10px;
+}
+
+.box2 {
+  height: 320px;
+  width: 400px;
+  background-color: #111111;
+  border: thin solid #16484b;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+}
+
+.box3 {
+  height: 320px;
+  width: 400px;
+  background-color: #111111;
+  border: thin solid #16484b;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+}
+
+.services-section {
+  height: 120vh;
+  width: 100%;
+  background-color: #111111;
+  padding: 20px 20px;
+}
+
+.column-services {
+  height: 630px;
+  width: auto;
+  margin: 40px 100px;
+  flex: 0 0 auto;
+}
+
+.list {
+  background-color: #06292d;
+  border: thin solid #16484b;
+  width: auto;
+  height: 200px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.list-row1 {
+  width: 150px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.number {
+  color: #3fcece;
+  font-size: 80px;
+  font-family: "GlancyrNeue-Regular", "Glancyr", sans-serif;
+}
+
+.list-row2 {
+  display: flex;
+  flex: 0 1 100%;
+}
+
+.list-column {
+  display: flex;
+  flex: 0 1 100%;
+  margin: 20px;
+  flex-direction: column;
+}
+
+.service-title {
+  font-size: 30px;
+  font-family: Inter;
+  font-weight: 600;
+  color: white;
+}
+
+.service-desc {
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: 400;
+  color: white;
+  margin: 15px 0;
+}
+
+.service-spacer {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.techs {
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 16px;
+  background-color: #111;
+  color: #3fcece;
+  border-radius: 20px;
+  border: thin solid #3fcece;
 }
