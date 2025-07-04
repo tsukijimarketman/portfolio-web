@@ -659,3 +659,169 @@ a:active {
     transform: translateX(-50%);
   }
 }
+
+.project-section {
+  background-color: black;
+  height: 160vh;
+  width: 100%;
+  padding: 20px 20px;
+}
+
+.project-spacer {
+  margin: 40px 100px;
+  width: auto;
+  height: 930px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-container {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex: 0 0 auto;
+}
+
+.container {
+  width: calc(100% / 2.3);
+  height: 280px;
+  border-radius: 10px;
+  display: flex;
+}
+
+.container1 {
+  background-image: url("../assets/pbma.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container2 {
+  background-image: url("../assets/attendance.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container3 {
+  background-image: url("../assets/sport1.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container4 {
+  background-image: url("../assets/sport2.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container5 {
+  background-image: url("../assets/sport3.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container6 {
+  background-image: url("../assets/balungao.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.certificate-section {
+  background-color: #111111;
+  height: 90vh;
+  width: 100%;
+  padding: 20px 20px;
+}
+
+.certificate-spacer {
+  width: auto;
+  height: 430px;
+  margin: 20px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.certificate-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 50%;
+}
+
+.cert-con {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.con1 {
+  background-image: url("../assets/cert1.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.con2 {
+  background-image: url("../assets/cert2.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.con3 {
+  background-image: url("../assets/cert3.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.con4 {
+  background-image: url("../assets/cert4.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.certificate-container:nth-child(2) {
+  justify-content: space-between;
+  width: auto;
+  margin: 0 155px;
+}
+
+.con5 {
+  background-image: url("../assets/cert5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.con6 {
+  background-image: url("../assets/cert6.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.con7 {
+  background-image: url("../assets/cert7.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.contact-section {
+  background-color: black;
+  height: 90vh;
+  width: 100%;
+  padding: 20px 20px;
+}
