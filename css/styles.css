@@ -821,7 +821,27 @@ a:active {
 
 .contact-section {
   background-color: black;
-  height: 90vh;
+  height: 110vh;
   width: 100%;
   padding: 20px 20px;
+}
+
+.contact-spacer {
+  height: 535px;
+  width: auto;
+  margin: 40px 100px;
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-row:nth-child(1) {
+  background-color: burlywood;
+  height: 100%;
+  width: 55%;
+}
+
+.contact-row:nth-child(2) {
+  background-color: purple;
+  height: 100%;
+  width: 45%;
 }
