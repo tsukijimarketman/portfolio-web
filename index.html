@@ -670,14 +670,32 @@
           </p>
         </div>
         <div class="div2">
-          <p class="ftitle">Sections</p>
-          <a href="#home" class="fdesc">Home</a>
-          <a href="#about" class="fdesc">About</a>
-          <a href="#services" class="fdesc">Services</a>
-          <a href="#techstack" class="fdesc">Tech Stack</a>
-          <a href="#projects" class="fdesc">Projects</a>
-          <a href="#certificates" class="fdesc">Certificates</a>
-          <a href="#contact" class="fdesc">Contact</a>
+          <p class="ftitle">Gallery</p>
+          <a href="#" class="fdesc">See photos</a>
+          <div id="photoModal" class="photo-modal">
+            <div class="modal-backdrop"></div>
+            <button class="modal-close" aria-label="Close">&times;</button>
+            <div class="photo-grid">
+              <img src="assets/1.jpg" alt="Photo 1" />
+              <img src="assets/2.jpg" alt="Photo 2" />
+              <img src="assets/3.jpg" alt="Photo 3" />
+              <img src="assets/4.jpg" alt="Photo 4" />
+              <img src="assets/5.jpg" alt="Photo 5" />
+              <img src="assets/6.jpg" alt="Photo 6" />
+              <img src="assets/7.jpg" alt="Photo 7" />
+              <img src="assets/8.jpg" alt="Photo 8" />
+              <img src="assets/9.jpg" alt="Photo 9" />
+              <img src="assets/10.jpg" alt="Photo 10" />
+              <img src="assets/11.jpg" alt="Photo 11" />
+              <img src="assets/12.jpg" alt="Photo 12" />
+              <img src="assets/13.jpg" alt="Photo 13" />
+              <img src="assets/14.jpg" alt="Photo 14" />
+              <img src="assets/15.jpg" alt="Photo 15" />
+              <img src="assets/16.jpg" alt="Photo 16" />
+              <img src="assets/17.jpg" alt="Photo 17" />
+              <img src="assets/18.jpg" alt="Photo 18" />
+            </div>
+          </div>
         </div>
         <div class="div3">
           <p class="ftitle">Follow Me</p>
@@ -724,6 +742,26 @@
         navbar.style.display =
           navbar.style.display === "flex" ? "none" : "flex";
       });
+
+      //here is the logic of the gallery
+      const seePhotos = document.querySelector(".fdesc");
+      const photoModal = document.getElementById("photoModal");
+      const closeModal = document.querySelector(".modal-close");
+      const modalBackdrop = document.querySelector(".modal-backdrop");
+
+      seePhotos.addEventListener("click", function (e) {
+        e.preventDefault();
+        photoModal.classList.add("active");
+        document.body.style.overflow = "hidden"; // Prevent background scroll
+      });
+
+      function closePhotoModal() {
+        photoModal.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+
+      closeModal.addEventListener("click", closePhotoModal);
+      modalBackdrop.addEventListener("click", closePhotoModal);
     </script>
   </body>
 </html>
