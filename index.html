@@ -54,8 +54,10 @@
               I create cutting-edge digital solutions that transform businesses
               and elevate the user experience through innovative technology.
             </p>
-            <button type="button" class="btn1">Get Started ➔</button>
-            <button type="button" class="btn2">View Projects ▶</button>
+            <div class="btn-row">
+              <button type="button" class="btn1">Get Started ➔</button>
+              <button type="button" class="btn2">View Projects ▶</button>
+            </div>
           </div>
           <div class="side home2">
             <div class="code-block">
@@ -554,15 +556,50 @@
           </div>
           <div class="certificate-spacer">
             <div class="certificate-container">
-              <div class="cert-con con1"></div>
-              <div class="cert-con con2"></div>
-              <div class="cert-con con3"></div>
-              <div class="cert-con con4"></div>
+              <div class="cert-con con1">
+                <a
+                  href="https://www.freecodecamp.org/certification/GMVelasquez/responsive-web-design"
+                  target="_blank"
+                ></a>
+              </div>
+              <div class="cert-con con2">
+                <a
+                  href="https://www.freecodecamp.org/certification/GMVelasquez/front-end-development-libraries"
+                  target="_blank"
+                ></a>
+              </div>
+              <div class="cert-con con3">
+                <a
+                  href="https://www.freecodecamp.org/certification/GMVelasquez/javascript-algorithms-and-data-structures"
+                  target="_blank"
+                ></a>
+              </div>
+              <div class="cert-con con4">
+                <a
+                  href="https://www.freecodecamp.org/certification/GMVelasquez/data-visualization"
+                  target="_blank"
+                ></a>
+              </div>
             </div>
             <div class="certificate-container">
-              <div class="cert-con con5"></div>
-              <div class="cert-con con6"></div>
-              <div class="cert-con con7"></div>
+              <div class="cert-con con5">
+                <a
+                  href="https://www.udemy.com/certificate/UC-07de656e-16f2-46ba-a0f2-27d636491fb2/"
+                  target="_blank"
+                ></a>
+              </div>
+              <div class="cert-con con6">
+                <a
+                  href="https://www.udemy.com/certificate/UC-17d830e3-4b5d-4a5a-9109-c73485ad563a/"
+                  target="_blank"
+                ></a>
+              </div>
+              <div class="cert-con con7">
+                <a
+                  href="https://www.udemy.com/certificate/UC-bb221af3-cd74-4575-97f8-0bcd4a0d83e7/"
+                  target="_blank"
+                ></a>
+              </div>
             </div>
           </div>
         </div>
@@ -634,18 +671,21 @@
                 </div>
               </div>
             </div>
-            <div class="contact-row">
+
+            <form id="contact-form" class="contact-row">
               <input
                 type="text"
                 placeholder="Your Name"
                 class="yourname"
                 title="Only letters and spaces are allowed."
+                name="from_name"
                 required
               />
               <input
                 type="email"
                 placeholder="Your Email"
                 class="yourname"
+                name="from_email"
                 title="Only letters and @ are allowed."
                 required
               />
@@ -653,10 +693,11 @@
                 type="textarea"
                 placeholder="Your Message"
                 class="textarea"
+                name="message"
                 required
               ></textarea>
-              <button type="button" class="btn-send">Send Message ➤</button>
-            </div>
+              <button type="submit" class="btn-send">Send Message ➤</button>
+            </form>
           </div>
         </div>
       </section>
@@ -762,6 +803,33 @@
 
       closeModal.addEventListener("click", closePhotoModal);
       modalBackdrop.addEventListener("click", closePhotoModal);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      emailjs.init("fPS6-zJjwDTed_6zI");
+
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Get form data
+          const form = this;
+          const formData = new FormData(form);
+          // Set subject to from_name
+          formData.append("subject", formData.get("from_name"));
+
+          emailjs.sendForm("service_zfze5sj", "template_jro4jmt", form).then(
+            function () {
+              alert("Message sent successfully!");
+              form.reset();
+            },
+            function (error) {
+              alert("Failed to send message. Please try again.");
+              console.error(error);
+            }
+          );
+        });
     </script>
   </body>
 </html>

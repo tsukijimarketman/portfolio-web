@@ -72,7 +72,7 @@ body {
       transparent 2px
     ),
     linear-gradient(90deg, rgba(63, 206, 206, 0.12) 1px, transparent 1px);
-  background-size: 50px 50px;
+  background-size: 3vw 3vw;
   animation: gridMove 10s linear infinite;
 }
 
@@ -81,7 +81,7 @@ body {
     background-position: 0 0, 0 0;
   }
   100% {
-    background-position: 50px 50px, 50px 50px;
+    background-position: 3vw 3vw, 3vw 3vw;
   }
 }
 
@@ -120,7 +120,7 @@ a:active {
 }
 
 .item {
-  font-size: 15px;
+  font-size: calc(10vw / 10);
 }
 
 .appbar {
@@ -136,18 +136,12 @@ a:active {
   border-bottom: thin solid #f1fcfb5f;
 }
 
-.navbar {
-  display: flex;
-  flex: 0 0 600px;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .navbar ul {
   display: flex;
-  flex: 0 0 600px;
+  flex: 0 1 auto;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
 }
 
 .navbar-toggle {
@@ -164,28 +158,39 @@ a:active {
   background-color: black;
   display: flex;
   height: 90vh;
-  width: auto;
+  flex: 1 1 auto;
+  padding: calc(10vw / 2) calc(10vw / 2);
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .home1 {
-  margin: 90px 100px;
-  height: auto;
-  flex: 0 0 auto;
-  max-width: 680px;
-  width: 100%;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  max-width: 51.5%;
+  height: fit-content;
+}
+
+.btn-row {
+  padding: 20px 0;
+  display: flex;
+  flex: 1 1 auto;
+  gap: 1.5rem;
 }
 
 .home2 {
+  max-width: 48.5%;
   display: flex;
-  margin: 200px 0;
-  margin-right: 100px;
-  flex: 1 0 auto;
+  flex: 1 1 auto;
+  margin: 6.25rem 0 6.25rem 2.5rem;
+  justify-self: flex-end;
 }
 
 .name1 {
   font-family: Inter;
-  font-size: 80px;
+  font-size: calc(12vw / 2.3);
   text-transform: uppercase;
   color: #f1fcfb;
   letter-spacing: 4px;
@@ -193,7 +198,7 @@ a:active {
 
 .name2 {
   font-family: Inter;
-  font-size: 110px;
+  font-size: calc(20vw / 2.78);
   text-transform: uppercase;
   font-weight: 900;
   color: #3fcece;
@@ -209,7 +214,7 @@ a:active {
 .desc1 {
   margin-top: 10px;
   font-family: Inter;
-  font-size: 30px;
+  font-size: calc(10vw / 4.959);
   font-weight: 300;
   color: rgb(174, 174, 174);
   letter-spacing: 3px;
@@ -220,28 +225,25 @@ a:active {
 }
 
 .btn1 {
-  margin-top: 40px;
-  width: 180px;
-  height: 70px;
-  border-radius: 150px;
+  width: calc(50vw / 4);
+  height: calc(40vw / 10);
+  border-radius: calc(40vw / 10);
   background-color: #3fcece;
   border: none;
   font-family: Inter;
-  font-size: 18px;
+  font-size: calc(10vw / 8);
   font-weight: bold;
   cursor: pointer;
 }
 
 .btn2 {
-  margin-top: 40px;
-  margin-left: 20px;
-  width: 180px;
-  height: 70px;
-  border-radius: 150px;
+  width: calc(50vw / 4);
+  height: calc(40vw / 10);
+  border-radius: calc(40vw / 10);
   background-color: white;
   border: none;
   font-family: Inter;
-  font-size: 18px;
+  font-size: calc(10vw / 8);
   font-weight: bold;
   cursor: pointer;
 }
@@ -304,10 +306,6 @@ a:active {
   background: #10151a;
   line-height: 3;
 }
-
-/* .code-line {
-  white-space: pre;
-} */
 
 .keywod {
   color: #3fcece;
@@ -819,11 +817,23 @@ a:active {
   background-position: center;
 }
 
+.con1 a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 .con2 {
   background-image: url("../assets/cert2.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.con2 a {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .con3 {
@@ -833,11 +843,23 @@ a:active {
   background-position: center;
 }
 
+.con3 a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 .con4 {
   background-image: url("../assets/cert4.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.con4 a {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .certificate-container:nth-child(2) {
@@ -853,6 +875,12 @@ a:active {
   background-position: center;
 }
 
+.con5 a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 .con6 {
   background-image: url("../assets/cert6.jpg");
   background-repeat: no-repeat;
@@ -860,11 +888,23 @@ a:active {
   background-position: center;
 }
 
+.con6 a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 .con7 {
   background-image: url("../assets/cert7.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.con7 a {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .contact-section {
@@ -1013,6 +1053,7 @@ textarea:focus {
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
+  align-items: center;
 }
 
 .foot-title {
@@ -1156,14 +1197,86 @@ textarea:focus {
 }
 
 @media (max-width: 600px) {
-  /* Mobile styles here */
+  .item {
+    font-size: calc(10vw / 3);
+  }
+
+  .home-section {
+    height: auto;
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .navbar {
+    display: flex;
+    flex: 0 0 600px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar ul {
+    display: flex;
+    flex: 0 0 600px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-toggle {
+    background-color: transparent;
+    display: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #3fcece;
+    cursor: pointer;
+    z-index: 1100;
+  }
 }
 
 @media (min-width: 601px) and (max-width: 1024px) {
-  /* Tablet styles here */
+  .item {
+    font-size: calc(10vw / 4.5);
+  }
+  .home-section {
+    height: auto;
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .navbar {
+    display: flex;
+    flex: 0 0 600px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar ul {
+    display: flex;
+    flex: 0 0 600px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-toggle {
+    background-color: transparent;
+    display: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #3fcece;
+    cursor: pointer;
+    z-index: 1100;
+  }
+  .home-section {
+    height: auto;
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
 }
 
 @media (max-width: 1024px) {
+  .appbar {
+    padding: 1rem;
+  }
+
   .navbar {
     display: none;
   }
@@ -1253,4 +1366,30 @@ textarea:focus {
   border-radius: 10px;
   box-shadow: 0 2px 8px #0005;
   background: #222;
+}
+
+@media (min-width: 1024px) {
+  .navbar {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar ul {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-toggle {
+    background-color: transparent;
+    display: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #3fcece;
+    cursor: pointer;
+    z-index: 1100;
+  }
 }
