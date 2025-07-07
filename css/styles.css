@@ -6,27 +6,31 @@
 }
 
 html {
+  font-size: 16px;
   scroll-padding-top: 70px;
 }
 
 body {
-  padding-top: 78px;
+  padding-top: 4.875rem;
+  background-color: black;
 }
 
 .FAQ {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 1.25rem;
+  right: 1.25rem;
   z-index: 999;
-  font-size: 20px;
-  padding: 10px;
+  font-size: 1.25rem;
+  padding: 0.625rem;
   border: none;
   background-color: #1cadb0;
-  height: 60px;
-  width: 60px;
-  border-radius: 200px;
+  height: 3.5vw;
+  width: 3.5vw;
+  border-radius: 100%;
+  min-width: 40px;
+  min-height: 40px;
   background-image: url("../assets/chatbot.png");
-  background-size: 40px;
+  background-size: 80% 80%;
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -69,7 +73,7 @@ body {
     ),
     linear-gradient(90deg, rgba(63, 206, 206, 0.12) 1px, transparent 1px);
   background-size: 50px 50px;
-  animation: gridMove 20s linear infinite;
+  animation: gridMove 10s linear infinite;
 }
 
 @keyframes gridMove {
@@ -89,6 +93,7 @@ body {
 h1 {
   color: #3fcece;
   font-family: "GlancyrNeue-Bold", "Glancyr", sans-serif;
+  font-size: clamp(1.5rem, 2vw, 3rem);
 }
 
 li {
@@ -120,14 +125,14 @@ a:active {
 
 .appbar {
   position: fixed;
+  background-color: #111;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
   display: flex;
-  background-color: #06292d;
   justify-content: space-between;
-  padding: 20px 80px;
+  padding: 1.25rem 5rem;
   border-bottom: thin solid #f1fcfb5f;
 }
 
@@ -143,6 +148,16 @@ a:active {
   flex: 0 0 600px;
   align-items: center;
   justify-content: space-between;
+}
+
+.navbar-toggle {
+  background-color: transparent;
+  display: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #3fcece;
+  cursor: pointer;
+  z-index: 1100;
 }
 
 .home-section {
@@ -699,11 +714,23 @@ a:active {
   background-repeat: no-repeat;
 }
 
+.container1 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .container2 {
   background-image: url("../assets/attendance.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.container2 a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .container3 {
@@ -713,11 +740,23 @@ a:active {
   background-repeat: no-repeat;
 }
 
+.container3 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .container4 {
   background-image: url("../assets/sport2.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.container4 a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .container5 {
@@ -727,11 +766,23 @@ a:active {
   background-repeat: no-repeat;
 }
 
+.container5 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .container6 {
   background-image: url("../assets/balungao.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.container6 a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .certificate-section {
@@ -942,4 +993,208 @@ textarea:focus {
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
+}
+
+.footer-section {
+  background-color: #111;
+  display: flex;
+  height: 40vh;
+  width: 100%;
+  padding: 20px;
+}
+
+.parent {
+  background-color: #111111;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 50px;
+  gap: 15px;
+}
+.div1 {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+.foot-title {
+  color: #3fcece;
+  font-family: "GlancyrNeue-Bold", "Glancyr", sans-serif;
+  font-size: 30px;
+}
+
+.foot-desc {
+  color: gray;
+  font-family: Inter, sans-serif;
+  font-size: 15px;
+}
+
+.div2 {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ftitle {
+  color: white;
+  font-family: "GlancyrNeue-Bold", "Glancyr", sans-serif;
+  font-size: 20px;
+}
+
+.fdesc {
+  margin: 5px;
+}
+
+.div3 {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+.div4 {
+  grid-column: span 3 / span 3;
+  grid-row-start: 2;
+  height: 50px;
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+  border-top: thin solid #1cadb0;
+  display: flex;
+}
+
+.div4 p {
+  padding: 10px 0 0 0;
+  font-size: 15px;
+  font-family: Inter;
+  color: #1cadb0;
+}
+
+.ftitle-spacer {
+  margin-top: 20px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+}
+
+.github {
+  cursor: pointer;
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  background-image: url("../assets/github.png");
+  background-size: cover;
+  background-position: center;
+  border: none;
+  background-repeat: no-repeat;
+}
+
+.github a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.linkedin {
+  cursor: pointer;
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  background-image: url("../assets/linkedin.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+}
+
+.linkedin a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.facebook {
+  cursor: pointer;
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  background-image: url("../assets/facebook.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+}
+
+.facebook a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.instagram {
+  cursor: pointer;
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  background-image: url("../assets/instagram.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+}
+
+.instagram a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 600px) {
+  /* Mobile styles here */
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  /* Tablet styles here */
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    display: none;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 90px; /* adjust based on your header height */
+    right: 0;
+    background: #111;
+    flex-direction: column;
+    width: 200px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 8px rgba(63, 206, 206, 0.15);
+    z-index: 1100;
+    padding: 1rem 0;
+  }
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  .navbar li {
+    width: 100%;
+    align-self: center;
+  }
 }

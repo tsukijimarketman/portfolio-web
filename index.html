@@ -29,6 +29,7 @@
       <button type="button" class="FAQ"></button>
       <div class="appbar">
         <h1>Software Developer</h1>
+        <button class="navbar-toggle" aria-label="Open navigation">☰</button>
         <nav class="navbar">
           <ul>
             <li class="item nav1"><a href="#home">Home</a></li>
@@ -495,16 +496,40 @@
           </div>
           <div class="project-spacer">
             <div class="project-container">
-              <div class="container container1"></div>
-              <div class="container container2"></div>
+              <div class="container container1">
+                <a href="https://pbmasportal.web.app/" target="_blank"></a>
+              </div>
+              <div class="container container2">
+                <a href="https://attendance-dci.web.app/" target="_blank"></a>
+              </div>
             </div>
             <div class="project-container">
-              <div class="container container3"></div>
-              <div class="container container4"></div>
+              <div class="container container3">
+                <a
+                  href="https://sportstxt-website-designs.vercel.app/"
+                  target="_blank"
+                ></a>
+              </div>
+              <div class="container container4">
+                <a
+                  href="https://elegant-design-sportstxt.vercel.app/"
+                  target="_blank"
+                ></a>
+              </div>
             </div>
             <div class="project-container">
-              <div class="container container5"></div>
-              <div class="container container6"></div>
+              <div class="container container5">
+                <a
+                  href="https://minimalist-design-eight.vercel.app/"
+                  target="_blank"
+                ></a>
+              </div>
+              <div class="container container6">
+                <a
+                  href="https://balungaonhs-29b22.web.app/"
+                  target="_blank"
+                ></a>
+              </div>
             </div>
           </div>
         </div>
@@ -636,8 +661,69 @@
         </div>
       </section>
     </main>
-    <footer>
-      <!-- Place the Bootstrap here -->
+    <footer class="footer-section">
+      <div class="parent">
+        <div class="div1">
+          <p class="foot-title">Gerick M. Velasquez</p>
+          <p class="foot-desc">
+            Building the future of technology, one innovation at a time.
+          </p>
+        </div>
+        <div class="div2">
+          <p class="ftitle">Sections</p>
+          <a href="#home" class="fdesc">Home</a>
+          <a href="#about" class="fdesc">About</a>
+          <a href="#services" class="fdesc">Services</a>
+          <a href="#techstack" class="fdesc">Tech Stack</a>
+          <a href="#projects" class="fdesc">Projects</a>
+          <a href="#certificates" class="fdesc">Certificates</a>
+          <a href="#contact" class="fdesc">Contact</a>
+        </div>
+        <div class="div3">
+          <p class="ftitle">Follow Me</p>
+          <div class="ftitle-spacer">
+            <div class="github">
+              <a
+                href="https://github.com/tsukijimarketman"
+                target="_blank"
+                aria-label="GitHub"
+              ></a>
+            </div>
+            <div class="linkedin">
+              <a
+                href="https://www.linkedin.com/in/gerickmvelasquez/"
+                target="_blank"
+                aria-label="LinkedIn"
+              ></a>
+            </div>
+            <div class="facebook">
+              <a
+                href="https://www.facebook.com/GerickTheAesthetic"
+                target="_blank"
+                aria-label="Facebook"
+              ></a>
+            </div>
+            <div class="instagram">
+              <a
+                href="https://www.instagram.com/gerizzed/"
+                target="_blank"
+                aria-label="Instagram"
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="div4">
+          <p class="copyright">@2025 GMV. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
+    <script>
+      const toggle = document.querySelector(".navbar-toggle");
+      const navbar = document.querySelector(".navbar");
+      toggle.addEventListener("click", () => {
+        navbar.style.display =
+          navbar.style.display === "flex" ? "none" : "flex";
+      });
+    </script>
   </body>
 </html>
