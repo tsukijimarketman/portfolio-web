@@ -55,8 +55,12 @@
               and elevate the user experience through innovative technology.
             </p>
             <div class="btn-row">
-              <button type="button" class="btn1">Get Started ➔</button>
-              <button type="button" class="btn2">View Projects ▶</button>
+              <button type="button" class="btn1" id="getStartedBtn">
+                Get Started ➔
+              </button>
+              <button type="button" class="btn2" id="viewProjectsBtn">
+                View Projects ▶
+              </button>
             </div>
           </div>
           <div class="side home2">
@@ -367,8 +371,6 @@
                   />
                   <span class="tech-label">Tailwind</span>
                 </div>
-              </div>
-              <div class="marquee-content">
                 <div class="tech-item">
                   <img src="assets/react.png" alt="React" class="tech-logo" />
                   <span class="tech-label">React</span>
@@ -504,8 +506,7 @@
               <div class="container container2">
                 <a href="https://attendance-dci.web.app/" target="_blank"></a>
               </div>
-            </div>
-            <div class="project-container">
+
               <div class="container container3">
                 <a
                   href="https://sportstxt-website-designs.vercel.app/"
@@ -518,8 +519,7 @@
                   target="_blank"
                 ></a>
               </div>
-            </div>
-            <div class="project-container">
+
               <div class="container container5">
                 <a
                   href="https://minimalist-design-eight.vercel.app/"
@@ -777,6 +777,7 @@
       </div>
     </footer>
     <script>
+      //gallery
       const toggle = document.querySelector(".navbar-toggle");
       const navbar = document.querySelector(".navbar");
       toggle.addEventListener("click", () => {
@@ -804,6 +805,8 @@
       closeModal.addEventListener("click", closePhotoModal);
       modalBackdrop.addEventListener("click", closePhotoModal);
     </script>
+
+    <!-- emailjs -->
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script>
       emailjs.init("fPS6-zJjwDTed_6zI");
@@ -829,6 +832,24 @@
               console.error(error);
             }
           );
+        });
+    </script>
+    <script>
+      //button redirect
+      document
+        .getElementById("getStartedBtn")
+        .addEventListener("click", function () {
+          document
+            .getElementById("contact")
+            .scrollIntoView({ behavior: "smooth" });
+        });
+
+      document
+        .getElementById("viewProjectsBtn")
+        .addEventListener("click", function () {
+          document
+            .getElementById("projects")
+            .scrollIntoView({ behavior: "smooth" });
         });
     </script>
   </body>
